@@ -12,6 +12,7 @@ import { fetchServersData } from './RoutesData';
 import DeleteVm from './operations/DeleteVmCenter';
 import SuspendVm from './operations/SuspendVmCenter'
 import PowerVm from './operations/PowerVm'
+import ColorSchemesExample from "./Navbar";
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
     backgroundColor: theme.palette.common.black,
@@ -49,6 +50,8 @@ console.log(servers)
 
 
   return (
+    <div>
+    <ColorSchemesExample/>
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
@@ -75,5 +78,6 @@ console.log(servers)
         </TableBody>
       </Table>
     </TableContainer>
+    </div>
   );
 }

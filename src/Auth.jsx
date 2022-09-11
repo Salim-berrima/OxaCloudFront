@@ -12,6 +12,7 @@ import { fetchVmsData } from './RoutesData';
 import DeleteVm from './operations/DeleteVmCenter';
 import SuspendVm from './operations/SuspendVmCenter';
 import PowerVm from './operations/PowerVm';
+import ColorSchemesExample from "./Navbar";
 import PowerVmof from './operations/PowerVmOf';
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -50,6 +51,8 @@ console.log(vms)
 
 
   return (
+    <div>
+      <ColorSchemesExample/>
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
@@ -84,5 +87,6 @@ console.log(vms)
         </TableBody>
       </Table>
     </TableContainer>
+    </div>
   );
 }

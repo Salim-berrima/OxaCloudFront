@@ -2,6 +2,9 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import React, { useState } from "react";
 import axios from 'axios'
+import ColorSchemesExample from "./Navbar";
+
+
 function AddVm() {
 
   const [name, setName] = useState("");
@@ -35,6 +38,8 @@ function AddVm() {
     
   };
   return (
+    <div>
+      <ColorSchemesExample/>
     <Form className='ml-10' onSubmit={addvm}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>NAME</Form.Label>
@@ -82,6 +87,7 @@ function AddVm() {
         Create
       </Button>
     </Form>
+    </div>
   );
 }
 
